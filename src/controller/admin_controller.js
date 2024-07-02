@@ -35,7 +35,7 @@ const create_admin = async (req, res) => {
         res.status(200).json({
             success: true,
             message:"Admin created successfully & mail sent successfully",
-            // data: new_admin,
+            data: new_admin,
         });
     } catch (error) {
         //error
@@ -46,6 +46,31 @@ const create_admin = async (req, res) => {
     }
 };
 
+
+
+const get_admin = async(req,res) => {
+    try {
+        // service <= services => DATA
+        const admin_list = await admin_Services.get_admin_S()
+
+        if(!admin_list){
+            throw new Error("Data not found")
+        }
+
+        res.status(200).json({
+            success: true,
+            data: admin_list
+        })
+    } catch (error) {
+        res.status(400).json({
+            success: false,
+            message: error.message
+        })
+    }
+}
+
+
 module.exports = {
     create_admin,
+    get_admin
 };
