@@ -4,7 +4,7 @@ const router = require("./routes/v1");
 
 const app = express();
 
-app.listen(3000,
+app.listen(2000,
      () => {
         console.log("server runing...!");
     }
