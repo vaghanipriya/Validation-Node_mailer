@@ -24,7 +24,7 @@ const create_admin = async (req, res) => {
             from: "vaghanipriya23@gmail.com",
             to: "hiralkunjadiya9@gmail.com",
             subject: "On this subject: DEMO MAIL",
-            text: "This is a nodemailer mahhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhil. ",
+            text: "HII HIRAL....... ",
         });
 
         if(!mail_sent){
@@ -35,7 +35,7 @@ const create_admin = async (req, res) => {
         res.status(200).json({
             success: true,
             message:"Admin created successfully & mail sent successfully",
-            data: new_admin,
+            // data: new_admin,
         });
     } catch (error) {
         //error
